@@ -33,6 +33,10 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    profileImage: {
+      type: String, // This can be a URL or a file path
+      trim: true,
+    },
     isActive: {
       type: Boolean,
       default: true,

@@ -4,10 +4,12 @@ const cors = require("cors");
 const router = require("../route/index");
 
 const app = express();
-app.use(express.json());
+app.set('view engine', 'ejs');
+
+app.use(express.json()); // Middleware to parse JSON bodies
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/next", router);
 
-app.use(cors());
+// app.use(cors());
 
 module.exports = app;

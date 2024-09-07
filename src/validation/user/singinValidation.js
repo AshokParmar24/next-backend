@@ -1,7 +1,7 @@
-const { body, matchedData } = require("express-validator");
+const { body } = require("express-validator");
 const usersFindOne = require("../../operations/user/findOne");
 
-const userValidation = [
+const userSinginValidation = [
   body("email")
     .notEmpty()
     .withMessage("Email name is required")
@@ -49,4 +49,4 @@ const userValidation = [
       return true;
     }),
 ];
-module.exports = userValidation;
+module.exports = userSinginValidation;
